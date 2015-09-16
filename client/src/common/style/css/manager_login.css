@@ -1,0 +1,134 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+ *{font-family:'Nanum Gothic', sans-serif;}
+
+body{background:#f9f9f9; overflow-y:scroll;}
+.container {max-width: none !important; width:970px; background:#ffffff; border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}
+.no-margin{margin:0;}
+.no-padding{padding:0;}
+/*로그인*/
+.wrapper{margin:150px auto; width:780px;}
+.wrapper h1{font-family:'Nanum Gothic', sans-serif; font-size:36px; font-weight:600; border-bottom:3px solid #4A8695;  text-align:right;padding-bottom:10px; margin-bottom:5px;}
+
+.login-wrapper{background: #e5e5e5; overflow:hidden; padding:40px; width:750px; margin:auto;}
+.login-wrapper h2{font-family:'Nanum Gothic', sans-serif; font-weight:900; margin-bottom:5px; color:#fff; font-size:46px; margin-top:15px; text-align:left; text-shadow:1px 0 3px #999999;}
+.login-wrapper form{ overflow:hidden; border:1px solid #ffffff; padding:30px 15px;}
+.btn-success{text-shadow:0px -1px 1px #222222;}
+.btn-login{height:83px; font-size:26px; }
+
+/*공통*/
+/*header*/
+.top-nav{background:url('../../../assets/img/topnav-bg.png') no-repeat; width:362px; padding-right:30px; margin-right:-15px; margin-bottom:15px;}
+.top-nav li a{color:#ffffff; font-size:12px; padding:7px;}
+.top-nav li a:hover,.top-nav li a:focus,.top-nav li a:active{text-decoration:none; color:#bcdcb9;}
+
+nav{clear:both;}
+.main-nav{padding:25px 25px 0; background:#ffffff; padding-right:0; margin-bottom:15px;}
+.main-nav:after{content:"/\00a0"; color:#718e94; font-weight:600;}
+.main-nav li a{padding:0 15px; font-size:14px; color:#333333; font-weight:600;}
+.main-nav li a:hover,.main-nav li a:focus{color:#508692; text-decoration:none;}
+.breadcrumb.main-nav>li+li:before{color:#718e94; font-weight:600;}
+
+/*컨텐츠*/
+.cont-border{border:1px solid #dddddd; padding:12px; margin-bottom:17px; overflow:hidden;}
+.title-wrap{background:#4e8792; overflow:hidden; margin-bottom:20px;}
+.title-wrap h3{font-family:'Nanum Gothic', sans-serif; font-size:18px; font-weight:600; color:#ffffff; margin:8px 0;}
+
+.btn-white{border:2px solid #ffffff; color:#ffffff; background:none; font-weight:600; padding:4px 15px; font-size:12px; margin:5px;}
+.btn-white:hover,.btn-white:focus{color:#c4d5dc; border-color:#c4d5dc;}
+
+/*행사리스트 탭*/
+.event-tab{font-size:13px;}
+.event-tab li{bottom:-11px;}
+.event-tab li a{background:#58b258; color:#ffffff; padding:3px 6px;} 
+.event-tab li a:hover,.event-tab li a:focus{background:#609960; border:1px solid #609960;}
+.event-tab li.active a{padding:10px 10px;}
+.event-tab li.active{bottom:0;}
+
+/*행사리스트 테이블*/
+.e-list{font-size:13px; margin-top:25px;}
+.e-list thead{background:#c9e3c8; color:#656565; font-weight:600;}
+.e-list td a{color:#666666; font-size:12px;}
+.e-list thead tr td:first-child,.e-list tbody tr td:first-child{padding-left:25px;}
+
+/*페이지네이션*/
+.list-pages{width:133px; margin:5px auto; overflow:hidden; }
+.list-pages>li>a{background:none; color:#767676; font-weight:bold; border:0;}
+.list-pages>li>a:hover,.list-pages>li>a:focus{background:#609960; color:#fff;}
+
+.fix-height{height:230px; overflow-y: scroll;}
+
+.no-border>thead>tr>th, .no-border>tbody>tr>th, .no-border>thead>tr>td, .no-border>tbody>tr>td{border-top:none;}
+.input-tb{margin-bottom:10px;}
+.input-tb>tbody>tr>th{color:#555555; font-size:13px; vertical-align:middle; width:80px;}
+.btn-date{background: rgb(150,188,219); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2YmNkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYzc0YTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(150,188,219,1) 0%, rgba(60,116,163,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(150,188,219,1)), color-stop(100%,rgba(60,116,163,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(150,188,219,1) 0%,rgba(60,116,163,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(150,188,219,1) 0%,rgba(60,116,163,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(150,188,219,1) 0%,rgba(60,116,163,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(150,188,219,1) 0%,rgba(60,116,163,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96bcdb', endColorstr='#3c74a3',GradientType=0 ); /* IE6-8 */
+color:#ffffff; border:1px solid #96BCDB;}
+
+
+.del-sav button{padding:3px 15px; margin:0 6px;}
+.btn-del{background: rgb(117,92,168); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc1NWNhOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1YzQzOTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(117,92,168,1) 0%, rgba(92,67,151,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(117,92,168,1)), color-stop(100%,rgba(92,67,151,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(117,92,168,1) 0%,rgba(92,67,151,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(117,92,168,1) 0%,rgba(92,67,151,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(117,92,168,1) 0%,rgba(92,67,151,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(117,92,168,1) 0%,rgba(92,67,151,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#755ca8', endColorstr='#5c4397',GradientType=0 ); /* IE6-8 */
+border:1px solid #493479; color:#ffffff;}
+
+.btn-del:hover,.btn-del:focus,.btn-del:active{color:#ffffff; background:#493479;}
+
+footer{font-size:11px; color:#666666; margin-top:25px;}
+
+/*정보등록*/
+.event-tab-v{font-size:13px;}
+
+.event-tab-v li a{background:#58b258; color:#ffffff; border-radius: 4px 0 0 4px; margin-left:35px;}
+
+.event-tab-v li a:hover,.event-tab-v li a:focus{background:#609960;}
+.event-tab-v li.active a,.event-tab-v li.active a:hover,.event-tab-v li.active a:focus,.event-tab-v li.active a:active{background:#ffffff; color:#333333; border:1px solid #666666; margin-left:0; 
+border-right:1px solid #ffffff; font-weight:600;}
+
+.l-border h4{font-family:'Nanum Gothic', sans-serif; font-size:14px; font-weight:600;}
+.btn-green{
+background: rgb(98,148,189); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYyOTRiZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzYzc0YTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(98,148,189,1) 0%, rgba(60,116,163,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(98,148,189,1)), color-stop(100%,rgba(60,116,163,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(98,148,189,1) 0%,rgba(60,116,163,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(98,148,189,1) 0%,rgba(60,116,163,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(98,148,189,1) 0%,rgba(60,116,163,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(98,148,189,1) 0%,rgba(60,116,163,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6294bd', endColorstr='#3c74a3',GradientType=0 ); /* IE6-8 */
+
+border:1px solid #6294bd; color:#ffffff; font-weight:600; font-size:12px; margin:5px;}
+.btn-green:hover, .btn-green:focus{color:#f5f5f5; background:#3C74A3;}
+
+/*참가자등록*/
+.form-entry{margin:30px; border:1px solid #e5e5e5; padding:15px 2px 15px 5px; overflow:hidden;}
+
+/*카드등록*/
+.kang01 a{color:#db6139 !important; font-weight:600;}
+.gan02 a{color:#5c83c2 !important; font-weight:600;}
+
+
+
+
+.form-horizontal .control-label{padding-top:0;}
+
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}

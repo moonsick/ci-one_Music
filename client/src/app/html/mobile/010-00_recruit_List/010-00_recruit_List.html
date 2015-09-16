@@ -1,0 +1,163 @@
+<div ng-controller="recruitList_Ctr">
+    <div class="all-wrap">
+        <!--분류-->
+        <div class="search-wrap">
+            <div class="col-xs-2 no-padding">
+                <button class="btn btn-kword active">
+                    전체
+                </button>
+            </div>
+            <div class="col-xs-4 no-padding">
+                <div class="pull-right" style="width:100px; overflow:hidden;">
+                    <button class="btn btn-kword">
+                        정기
+                    </button>
+                    <button class="btn btn-kword">
+                        단기
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-6 no-padding">
+                <div class="pull-right" style="width:150px;">
+                    <button class="btn btn-kword">
+                        세션
+                    </button>
+                    <button class="btn btn-kword">
+                        보컬
+                    </button>
+                    <button class="btn btn-kword">
+                        총괄
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--키워드-->
+        <div class="col-xs-12">
+            <div class="search-input">
+                <input type="text" class="form-control" placeholder="키워드">
+                <button type="button" class="btn search-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/src/assets/img/searchtool.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--리스트-->
+    <div class="wrapper">
+        <!--모집중-->
+        <div ng-repeat="recruit_list in recruit_list">
+
+            <div ng-if="recruit_list.isEnd ==null">
+                <div class="box-ing">
+                    <!--모집중 타이틀-->
+                    <div class="box-head">
+                        <div class="col-xs-6">
+                            <p class="title">
+                                모집중
+                            </p><img src="/src/assets/img/premiun-badge.png" class="img-responsive" alt="프리미엄">
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="text-right">
+                                <span><!--단기-->{{recruit_list.categoryFirstName}}</span> >
+                                <span><!--반주-->{{recruit_list.categorySecName}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!--모집중 내용-->
+                    <div class="box-body">
+                        <p class="col-xs-9 no-padding box-title">
+                            {{recruit_list.recruitTitle}}
+                        </p>
+                        <p class="col-xs-3 no-padding box-area">
+                            <!--서울-->{{recruit_list.locationName}}
+                        </p>
+                        <div class="box-detail">
+                            <p class="col-xs-9 no-padding">
+                                <!--모집 내용-->{{recruit_list.recruitContents}}
+                            </p>
+                            <ul class="col-xs-3 no-padding list-unstyled ul-info">
+                                <li>
+                                    <img src="/src/assets/img/kr-won.png" class="img-responsive pull-left">	{{recruit_list.recruitPrice}}
+                                </li>
+                                <li>
+                                    <img src="/src/assets/img/sendwatch.png" class="img-responsive pull-left">{{recruit_list.result_time}}일 남음
+                                </li>
+                                <li>
+                                    <img src="/src/assets/img/music-icon.png" class="img-responsive pull-left">{{recruit_list.apply_count}}명 지원
+                                </li>
+                            </ul>
+                        </div>
+                        <!--모집중 태그-->
+                        <div class="box-footer">
+                            <ul class="list-unstyled list-inline ul-tag" id="tag{{recruit_list.recruitPK}}">
+                                <!--<li>다행이다</li><li>보컬</li><li>피아노</li><li>축가</li><li>반주</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--마감-->
+            <div ng-if="recruit_list.isEnd =='1'">
+                <div class="box-ing box-end">
+                    <!--마감 타이틀-->
+                    <div class="box-head">
+                        <div class="col-xs-6">
+                            <p class="title">
+                                마감
+                            </p>
+                        </div>
+                        <div class="col-xs-6">
+                            <p class="text-right">
+                                <span><!--단기-->{{recruit_list.categoryFirstName}}</span> >
+                                <span><!--반주-->{{recruit_list.categorySecName}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <!--마감 내용-->
+                    <div class="box-body">
+                        <p class="col-xs-9 no-padding box-title">
+                            <!--주일 베이스 정기적으로 반주 해 주실분 찾습니다-->
+                            {{recruit_list.recruitTitle}}
+                        </p>
+                        <p class="col-xs-3 no-padding box-area">
+                            <!--서울-->{{recruit_list.locationName}}
+                        </p>
+                        <div class="box-detail">
+                            <p class="col-xs-9 no-padding">
+                                <!--모집 내용-->{{recruit_list.recruitContents}}
+                            </p>
+                            <ul class="col-xs-3 no-padding list-unstyled ul-info">
+                                <li>
+                                    <img src="/src/assets/img/kr-won.png" class="img-responsive pull-left">	{{recruit_list.recruitPrice}}
+                                </li>
+                                <li>
+                                    <img src="/src/assets/img/sendwatch.png" class="img-responsive pull-left">{{recruit_list.result_time}}일 남음
+                                </li>
+                                <li>
+                                    <img src="/src/assets/img/music-icon.png" class="img-responsive pull-left">{{recruit_list.apply_count}}명 지원
+                                </li>
+                            </ul>
+                        </div>
+                        <!--마감 태그-->
+                        <div class="box-footer">
+                            <ul class="list-unstyled list-inline ul-tag" id="tag{{recruit_list.recruitPK}}">
+                                11
+                                <!--<li>다행이다</li><li>보컬</li><li>피아노</li><li>축가</li><li>반주</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>

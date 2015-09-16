@@ -1,0 +1,138 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansgothic.css);
+
+body {font-family: "Nanum Barun Gothic",'나눔바른고딕',NanumGothic,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif !important}
+
+/*header*/
+.header{padding:15px; display: inline-block; border-bottom:1px solid #c8c8c8;}
+.no-padding{padding:0;}
+.menu-nav{padding-top:3px;}
+.update{text-align:right; position:relative;}
+.update .new-icon{position:absolute; width:14px; height:14px; border-radius:50%; background:#f05032; color:#ffffff; font-size:8px; padding:1px 3px; right:-3px; top:-3px;}
+
+/*카테고리*/
+.search-wrap{padding:5px 0 11px; width:330px; margin:0 auto; overflow:hidden;}
+.search-wrap .btn-kword{float:left; padding:7px 10px; font-size:12px;}
+.btn-kword{color:#666666; background:#ededed; border:1px solid #dbdbdb; margin:0 2px;}
+.search-wrap .btn-kword.active{background:#f84d2f; color:#ffffff;}
+
+.btn-group-01{padding-right:6px; overflow:hidden; float:left;}
+.btn-group-02{padding:0 8px; overflow:hidden; float:left;}
+.btn-group-03{overflow:hidden; float:left;}
+
+/*키워드 검색*/
+.search-input{width:100%; position:relative; margin-bottom:13px;}
+.search-input input{height:30px; border:1px solid #f05032; border-radius: 15px; color:#666666;}
+.search-input input:focus{background:#f9f9f9;  box-shadow:none; }
+
+
+.search-btn{position:absolute; top:2px; right:12px; padding:0 3px; background:none;}
+
+
+
+.wrapper{background:#f9f9f9; border-top:1px solid #f3f3f3; padding:15px;}
+
+/*모집중*/
+.box-ing{background:#F84D2F; border-bottom-left-radius:10px; border-bottom-right-radius:10px; box-shadow:1px 3px 3px #dddddd; cursor:pointer; margin-bottom:20px;}
+.box-head{background:url('../../../assets/img/title-point.png') no-repeat 50% 100%; color:#ffffff; overflow:hidden; padding:6px 0; height:34px;}
+.title{float:left; font-size:14px;}
+.box-head img{width:38px; padding:3px 9px; }
+.box-head p{margin-bottom:0; padding-top:2px;}
+
+.box-body{background:#ffffff; border-bottom-left-radius:5px; border-bottom-right-radius:5px; border:1px solid #ebebeb; border-top:none; }
+.box-title{padding:10px 15px 5px; font-size:15px; color:#232323; margin-bottom:0; overflow:hidden; text-overflow:ellipsis; height:36px; white-space: nowrap;}
+.box-area{padding:10px 15px 5px; text-align:right; font-size:15px; color:#afafaf; margin-bottom:0;}
+
+.box-detail{padding:13px 0; margin:0 12px; border-top:1px solid #dddddd; clear:both; color:#999999; font-size:12px; line-height:1.7; overflow:hidden;}
+.box-detail p{margin-bottom:0; padding-right:5px;  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; -moz-box; -ms-box; box;
+    -webkit-line-clamp: 4; -moz-line-clamp: 4; -ms-line-clamp: 4; line-clamp: 4; /* 라인수 */
+    -webkit-box-orient: vertical; -moz-box-orient: vertical; -ms-box-orient: vertical; box-orient: vertical;
+    word-wrap:break-word;
+    line-height: 1.7em;
+    height: 6.8em; /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */}
+    
+.ul-info{padding-left:5px; font-size:14px; color:#666666; margin-bottom:0;}
+.ul-info li{padding:2px 0;}
+.ul-info li:first-child{padding-top:0;}
+.ul-info li img{width:13px; padding-top:4px; margin-right:5px; height:16px;}
+
+.box-footer{clear:both; border-top:1px solid #f3f3f3; padding:5px;}
+.ul-tag{ margin-bottom:0;}
+.ul-tag li{background:#66ced3; color:#FFFFFF; margin-right:5px; padding:2px 5px; border-radius:5px; text-align:center; font-size:12px;}
+.ul-tag li:first-child{padding-left:5px;}
+.ul-tag li:last-child{margin-right:0;}
+
+/*마감*/
+.box-end{background:#d6d6d6;}
+.box-end .ul-tag li{background:#919191;}
+
+/*푸터*/
+.footer{background:#555555; color:#FFFFFF; padding:18px 0;}
+.footer p{margin-bottom:0; font-size:12px;}
+
+
+
+/*좌측 메뉴*/
+.menu-wrap{width:268px; background:#FFFFFF; position:fixed; height:100%; top:0; left:-310px;  border-right:1px solid #a7a7a7; z-index:99999999; box-shadow:1px 0 3px #999;}
+.scroll{height:100%; overflow-y: scroll;}
+/*좌측 메뉴*/
+.user-info{padding:15px 10px; border-bottom:1px solid #dddddd; overflow:hidden; background:#f9f9f9; height:83px;}
+.user-info input{height:25px;}
+.btn-login{padding:15px 0; background:#666666; color:#FFFFFF;}
+.btn-login:hover,.btn-login:focus{color:#FFFFFF;}
+
+.close-btn{margin-bottom:5px; position:absolute; right:-30px; background:#666666; width:30px; text-align:center; z-index: 50; top:0; box-shadow:1px 0 3px #999999;}
+.close-btn a{font-size:20px; color:#FFFFFF; font-weight:bold;}
+.close-btn a:hover,.close-btn a:focus{text-decoration:none; color:#ffffff;}
+
+
+.nav-menu{padding:5px 0;}
+.nav-menu li a{padding: 10px 15px; display:block; border:1px solid #DDDDDD; color:#343434; margin:2px 5px; }
+.nav-menu li a:hover,.nav-menu li a:focus{text-decoration:none;}
+.nav-menu li a:focus{background:#f84d2f; color:#FFFFFF; border:1px solid #f84d2f;}
+.nav-menu .sub-menu a{padding:7px 20px; font-size:13px; color:#565656;}
+.nav-menu .sub-menu a img{width:14px; margin-right:3px;}
+
+
+.nic-name{font-size:16px; font-weight:600; border-bottom:1px solid #ffffff; padding-bottom:3px;}
+.coin-info{padding-top:9px;}
+.coin-info span{padding-left:5px; font-weight:600; color:#555555;}
+.coin-img{width:20px;}
+.coin-btn{padding:3px 10px; float:right; background:#54c1c6; color:#FFFFFF;}
+.coin-btn:hover,.coin-btn:focus{color:#FFFFFF;}
+
+
+.charge-radio-group{width:80%; margin:0 auto; border-bottom:1px solid #DDDDDD;}
+.charge-radio{padding:10px 0;}
+.charge-radio span{padding-left:10px; font-weight:600;}
+
+
+/*코인*/
+.all-price{float:right; font-size:20px; padding:10px 0; font-weight:600;} 
+.all-price img{height:13px; margin-top:6px; margin-right:6px; }
+
+.payment{clear:both; padding:0 10px;}
+.pay-title{font-size:15px; color:#454545; font-weight:600;}
+.payment ,.radio{margin-top:5px; margin-bottom:5px;}
+.payment input{width:20px; height:20px; margin:0 10px 0 0;}
+.payment .list-group{margin-bottom:0;}
+
+
+.pay-agree .panel-title{font-size:11px;}
+.pay-agree .radio{float:left; margin-bottom:0;}
+.pay-agree .panel-title>a{float:right; display:inline-block; margin-top:5px; color:#679ed5;}
+.pay-agree input{width:15px; height:15px;}
+.pay-agree .panel-heading{padding:5px 7px; overflow:hidden;}
+.pay-agree .panel-body{font-size:11px; padding:10px; line-height:1.7; color:#565656; height:100px; overflow-y:scroll;}
+
+
+.pay-agree .panel-group .panel+.panel{margin-top:3px;}
+.all-head{border:1px solid #dddddd;}
+.all-head>.panel-heading{background-color:#ffffff;}
+
+.btn-main{background:#f84d2f; color:#FFFFFF;}
+.btn-main:hover,.btn-main:focus{color:#FFFFFF;}
+.pay-button{margin:10px 0 15px;}

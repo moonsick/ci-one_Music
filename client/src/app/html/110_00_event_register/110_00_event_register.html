@@ -1,0 +1,184 @@
+<div ng-controller="event_register">
+    <div class="all-wrap">
+        <!--분류-->
+        <div class="search-wrap">
+            <div class="col-xs-2 no-padding">
+                <button class="btn btn-kword active">
+                    전체
+                </button>
+            </div>
+            <div class="col-xs-4 no-padding">
+                <div class="pull-right" style="width:100px; overflow:hidden;">
+                    <button class="btn btn-kword">
+                        정기
+                    </button>
+                    <button class="btn btn-kword">
+                        단기
+                    </button>
+                </div>
+            </div>
+            <div class="col-xs-6 no-padding">
+                <div class="pull-right" style="width:150px;">
+                    <button class="btn btn-kword">
+                        세션
+                    </button>
+                    <button class="btn btn-kword">
+                        보컬
+                    </button>
+                    <button class="btn btn-kword">
+                        총괄
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--키워드-->
+        <div class="col-xs-12">
+            <div class="search-input">
+                <input type="text" class="form-control" placeholder="키워드">
+                <button type="button" class="btn search-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/src/assets/img/searchtool.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--리스트-->
+    <div class="wrapper">
+        <!--모집중-->
+        <div class="box-ing">
+            <!--모집중 타이틀-->
+            <div class="box-head">
+                <div class="col-xs-6">
+                    <p class="title">
+                        모집중
+                    </p><img src="/src/assets/img/premiun-badge.png" class="img-responsive" alt="프리미엄">
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right">
+                        <span>단기</span> > <span>반주</span>
+                    </p>
+                </div>
+            </div>
+            <!--모집중 내용-->
+            <div class="box-body">
+                <p class="col-xs-9 no-padding box-title">
+                    축가 반주자 찾아요
+                </p>
+                <p class="col-xs-3 no-padding box-area">
+                    서울
+                </p>
+                <div class="box-detail">
+                    <p class="col-xs-9 no-padding">
+                        <진행방식>2회 연습과 미팅<현재상황>	곡만 선정한 상태로 <상세내용> 이적이 부른 다행이다를 부를 생각입니다. 적절하게 잘라서 파트를 맡아 반주와 보컬로 나누어 진행할 예정입니다 많이 지원해주세요
+                    </p>
+                    <ul class="col-xs-3 no-padding list-unstyled ul-info">
+                        <li>
+                            <img src="/src/assets/img/kr-won.png" class="img-responsive pull-left">	협의
+                        </li>
+                        <li>
+                            <img src="/src/assets/img/sendwatch.png" class="img-responsive pull-left">3일 남음
+                        </li>
+                        <li>
+                            <img src="/src/assets/img/music-icon.png" class="img-responsive pull-left">6명 지원
+                        </li>
+                    </ul>
+                </div>
+                <!--모집중 태그-->
+                <div class="box-footer">
+                    <ul class="list-unstyled list-inline ul-tag">
+                        <li>다행이다</li><li>보컬</li><li>피아노</li><li>축가</li><li>반주</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--마감-->
+        <div class="box-ing box-end">
+            <!--마감 타이틀-->
+            <div class="box-head">
+                <div class="col-xs-6">
+                    <p class="title">
+                        마감
+                    </p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="text-right">
+                        <span>정기</span> > <span>세션</span>
+                    </p>
+                </div>
+            </div>
+            <!--마감 내용-->
+            <div class="box-body">
+                <p class="col-xs-9 no-padding box-title">
+                    주일 베이스 정기적으로 반주 해 주실분 찾습니다
+                </p>
+                <p class="col-xs-3 no-padding box-area">
+                    서울
+                </p>
+                <div class="box-detail">
+                    <p class="col-xs-9 no-padding">
+                        <진행방식>2회 연습과 미팅<현재상황>	곡만 선정한 상태로 <상세내용> 이적이 부른 다행이다를 부를 생각입니다. 적절하게 잘라서 파트를 맡아 반주와 보컬로 나누어 진행할 예정입니다 많이 지원해주세요
+                    </p>
+                    <ul class="col-xs-3 no-padding list-unstyled ul-info">
+                        <li>
+                            <img src="/src/assets/img/kr-won.png" class="img-responsive pull-left">	협의
+                        </li>
+                        <li>
+                            <img src="/src/assets/img/sendwatch.png" class="img-responsive pull-left">3일 남음
+                        </li>
+                        <li>
+                            <img src="/src/assets/img/music-icon.png" class="img-responsive pull-left">6명 지원
+                        </li>
+                    </ul>
+                </div>
+                <!--마감 태그-->
+                <div class="box-footer">
+                    <ul class="list-unstyled list-inline ul-tag">
+                        <li>다행이다</li><li>보컬</li><li>피아노</li><li>축가</li><li>반주</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<!--
+<div class="container aaa" ng-controller="event_register">
+
+	스케폴딩 컨텐츠
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/tXV7dfvSefo?feature=player_detailpage" frameborder="0" class="center-block"></iframe>
+    <br><br><br><br>
+    <img src="http://img.youtube.com/vi/tXV7dfvSefo/default.jpg">
+
+
+
+    <div ng-click="aaa();">
+        &lt;!&ndash;<iframe width="640" height="360" src="https://www.youtube.com/embed/tXV7dfvSefo?feature=player_detailpage" frameborder="0" class="center-block"></iframe>&ndash;&gt;
+    </div>
+
+    <form id="after_insert_go" action="/after_insert_go" method="post" enctype="multipart/form-data">
+
+        <input name="aaaa" value="123123123" id="aaaa">
+        <input type="file" name="qqqq" id="qqqq">
+        <button type="submit" ng-click="aa();">전송</button>
+        <div id="after_insert_go2">
+
+        </div>
+    </form>
+<div id="asa">
+
+</div>
+
+
+</div>
+
+
+
+-->

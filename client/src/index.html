@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>MUZITER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link rel="stylesheet" href="src/common/style/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/common/style/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="src/common/style/css/font-awesome.min.css" />
+
+
+
+</head>
+
+
+
+        <script>
+
+        </script>
+
+
+
+
+
+
+<!--모듈 명은 ng-app 으로 명시-->
+<!-- 컨트롤러 명은 ng-controller 로 명시-->
+<!--루트 모듈이자 루트 컨트롤러로 MainCrtrl 은 아래쪽에 링크하였음-->
+
+<body ng-app="eventApp" ng-controller="MainCtrl" ng-cloak>
+
+
+<!--로그아웃 일때-->
+<!--<div ng-if="!layout">
+    <div ng-include="'src/app/html/150_00_manager_login/150_00_manager_login.html'"></div>
+</div>-->
+
+
+<!--로그인 일때-->
+<!--<div ng-if="layout">
+    <div ng-include="'src/app/html/header-m.html'"></div>
+    <div>
+        <div ng-view=""></div>
+    </div>
+    <div ng-include="'src/app/html/footer-m.html'"></div>
+</div>-->
+
+<div ng-if="machine == 'pc'">
+    <div ng-include="'src/app/html/header-m.html'"></div>
+    <div>
+        <div ng-view=""></div>
+        <!--<div ng-view=""></div>-->
+    </div>
+    <div ng-include="'src/app/html/footer-m.html'"></div>
+
+</div>
+
+<div ng-if="machine == 'mobile'">
+    <div ng-view=""></div>
+</div>
+
+<div ng-if="machine == 'admin'">
+    관리자관리자관리자관리자관리자관리자관리자관리자
+</div>
+
+<div style="cursor: pointer"></div>
+
+<!-- build:js(app) scripts/vendor.js -->
+<!-- bower:js -->
+
+
+<script src="vendor/es5-shim/es5-shim.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/json3/lib/json3.min.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!--<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+
+
+<script src="vendor/services/angular-file-upload.min.js"></script>
+<script src="vendor/services/angular-file-upload-shim.js"></script>
+
+
+<script src="src/common/directives/app.js"></script>
+<script src="src/common/directives/dbConnectService.js"></script>
+<script src="src/common/directives/main.js"></script>
+
+
+
+<script src="src/app/html/footer-m.js"></script>
+<script src="src/app/html/header-m.js"></script>
+<script src="src/app/html/110_00_event_register/110_00_event_register.js"></script>
+<script src="src/app/html/mobile/010-00_recruit_List/010-00_recruit_List.js"></script>
+
+
+
+
+
+
+<!--<script src="vendor/services/dbConnectService.js"></script>-->
+
+<!--<script src="vendor/jquery/dist/jquery.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="vendor/jquery.form.min.js"></script>
+<script src="vendor/jquery.number.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- endbuild -->
+</body>
+</html>
