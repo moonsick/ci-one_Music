@@ -14,22 +14,20 @@
     <meta name="author" content="">
 
 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/src/assets/img/logo-lg.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/src/assets/img/logo-lg.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/src/assets/img/logo-lg.png">
+    <link rel="apple-touch-icon-precomposed" href="/src/assets/img/logo-lg.png">
+    <link rel="shortcut icon" href="/src/assets/img/logo-lg.png">
+
+
     <link rel="stylesheet" href="src/common/style/css/bootstrap.min.css" />
     <link rel="stylesheet" href="src/common/style/css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="src/common/style/css/font-awesome.min.css" />
-
-
-
+    <link rel="stylesheet" href="src/common/style/css/muziter.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.2.0/ZeroClipboard.min.js'></script>
 </head>
-
-
-
-        <script>
-
-        </script>
-
-
-
 
 
 
@@ -37,7 +35,11 @@
 <!-- 컨트롤러 명은 ng-controller 로 명시-->
 <!--루트 모듈이자 루트 컨트롤러로 MainCrtrl 은 아래쪽에 링크하였음-->
 
-<body ng-app="eventApp" ng-controller="MainCtrl" ng-cloak>
+<body ng-app="eventApp" ng-controller="MainCtrl" ng-cloak id="body">
+
+
+
+
 
 
 <!--로그아웃 일때-->
@@ -66,11 +68,13 @@
 </div>
 
 <div ng-if="machine == 'mobile'">
+    <div ng-include="'src/app/html/header-m.html'"></div>
     <div ng-view=""></div>
+    <div ng-include="'src/app/html/footer-m.html'"></div>
 </div>
 
 <div ng-if="machine == 'admin'">
-    관리자관리자관리자관리자관리자관리자관리자관리자
+    <!--관리자관리자관리자관리자관리자관리자관리자관리자-->
 </div>
 
 <div style="cursor: pointer"></div>
@@ -87,6 +91,7 @@
 <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
 <script src="vendor/angular-route/angular-route.js"></script>
 <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
 <!--<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
 
 
@@ -100,10 +105,26 @@
 
 
 
+
+<script src="src/app/html/m_common.js"></script>
 <script src="src/app/html/footer-m.js"></script>
 <script src="src/app/html/header-m.js"></script>
 <script src="src/app/html/110_00_event_register/110_00_event_register.js"></script>
+
+<script src="src/app/html/mobile/000-00_main/000-00_main.js"></script>
+
 <script src="src/app/html/mobile/010-00_recruit_List/010-00_recruit_List.js"></script>
+<script src="src/app/html/mobile/010-00_recruit_List/010-01_recruit_Detail.js"></script>
+<script src="src/app/html/mobile/010-00_recruit_List/010-02_recruit_Insert.js"></script>
+
+
+<script src="src/app/html/mobile/020-00_musician_List/020-00_musician_List.js"></script>
+<script src="src/app/html/mobile/020-00_musician_List/020-01_musician_Detail.js"></script>
+
+
+
+
+<script src="src/app/html/mobile/060-00_my_Menu/060-00_my_Menu.js"></script>
 
 
 
@@ -113,10 +134,16 @@
 <!--<script src="vendor/services/dbConnectService.js"></script>-->
 
 <!--<script src="vendor/jquery/dist/jquery.js"></script>-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<!--<script src="vendor/ZeroClipboard.js"></script>-->
 <script src="vendor/jquery.form.min.js"></script>
 <script src="vendor/jquery.number.min.js"></script>
+<script src="vendor/date_picker.js"></script>
 <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment.js"></script>
+<script>
+    var IMP = window.IMP;
+</script>
 
 <!-- endbuild -->
 </body>

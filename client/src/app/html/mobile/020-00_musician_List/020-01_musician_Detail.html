@@ -1,0 +1,417 @@
+<div ng-controller="common_Ctr">
+</div>
+
+<div ng-controller="musicianDetail_Ctr">
+
+    <div class="all-wrap">
+
+        <!--상세-->
+        <div class="wrapper" style="border-top:0;">
+            <!--상세-->
+            <div class="box-ing musician-box musician-detail">
+                <!--기본정보-->
+
+                <div class="user-img">
+                    <img src="/src/assets/img/no-img.png" class="img-responsive center-block" ng-if="musician_info[0].memberPicture == null">
+                    <img src="/src/assets/img/{{musician_info[0].memberPicture}}" class="img-responsive center-block" ng-if="musician_info[0].memberPicture !== null">
+                </div>
+
+                <!--모집중 내용-->
+                <div class="box-body">
+
+                    <div class="border">
+                        <dl class="col-xs-12 pro-info">
+                            <dt>
+                                닉네임
+                            </dt>
+                            <dd>
+                                <!--시안쟁이-->
+                                {{musician_info[0].memberNickname}}
+                            </dd>
+                            <dt>
+                                이름
+                            </dt>
+                            <dd>
+                                <!--강나다-->
+                                {{musician_info[0].memberName}}
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div class="border">
+                        <p class="text-mint">
+                            키워드
+                        </p>
+                        <ul class="list-unstyled list-inline ul-tag">
+                            <!--<li>
+                                반주
+                            </li>-->
+                            <li ng-repeat="server_tag in musician_info[0].server_tag" ng-if="musician_info[0].server_tag !== null" style="margin-bottom: 4px;">
+                                {{server_tag.tagName}}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="border">
+                        <dl class="col-xs-12 pro-info dl-block">
+                            <dt>
+                                소개
+                            </dt>
+                            <dd>
+                                <!--피아노 반주자 찾으세요?-->
+                                {{musician_info[0].memberInfo}}
+                            </dd>
+                        </dl>
+                    </div>
+
+                    <div>
+                        <dl class="col-xs-12 pro-info dl-block">
+                            <dt>
+                                경력
+                            </dt>
+                            <dd ng-bind-html="musician_info[0].memberCareer">
+
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <!--관리자의견-->
+            <div class="box-ing musician-detail detail-port">
+                <div class="sub-title">
+                    포트폴리오
+                </div>
+                <div class="sub-body">
+                    <ul class="list-unstyled" id="video_thumb_nail">
+                        <!--<li class="col-xs-4 no-padding">
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                                <img src="http://img.youtube.com/vi/{{portfolio_thumbnail.youtubeID}}/0.jpg" class="img-responsive" ng-if="portfolio_thumbnail.youtubeURL !== null">
+                                <video src="/src/video/{{portfolio_thumbnail.youtubeID}}" ng-if="portfolio_thumbnail.youtubeURL == null" class="img-responsive"></video>
+                            </a>
+                        </li>-->
+                    </ul>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content port-movie-modal">
+                                <div class="carousel slide well-sl" id="carousel-247689" data-interval="0" data-wrap="false">
+                                    <div class="carousel-inner" id="thumbnail_space" oncontextmenu='return false' ondragstart='return false' onselectstart='return false'>
+
+
+
+                                        <!--<div class="item" id="small_img2">
+
+
+                                            <h2>리멤버 뮤비영상</h2>
+                                            <p class="m-wrap" align="center">
+                                                <video controls class="movie-size" >
+                                                    &lt;!&ndash; <source src="video/big_buck_bunny.mp4" type="video/mp4">androidBrowser, ios safari, ie9, safari&ndash;&gt;
+                                                    <source src="/src/assets/img/big_buck_bunny.webm" type="video/webm"> &lt;!&ndash;파이어폭스, 크롬, 오페라, androidBrowser&ndash;&gt;
+                                                    <source src="/src/assets/img/big_buck_bunny.mp4" type="video/mp4">
+                                                    &lt;!&ndash;<source src="video/big_buck_bunny.ogv" type="video/ogg"> 파이어폭스, 크롬, 오페라&ndash;&gt;
+                                                    <img alt="Big Buck Bunny" src="/src/assets/img/big-buck-bunny_poster.jpg" class="movie-size" title="No video playback capabilities, please download the video below">
+                                                </video>
+
+                                            </p>
+                                            <div class="movie-info">
+                                                <p class="text-right m-i-date">업로드 일자 : <span>2015.08.03</span></p>
+                                                <p class="m-i-text">유명한 에이핑크의 리멤버 영상입니다. 이쁘게 봐주세요</p>
+                                            </div>
+
+                                            <div class="m-button-g">
+                                                <button class="btn btn-copy">URL 복사</button>
+                                                <div class="fb-like" data-href="#" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                                            </div>
+
+
+                                        </div>-->
+
+
+
+                                    </div>
+
+                                    <a id="prev_button" class="left carousel-control" href="#carousel-247689" data-slide="prev" ng-click="video_stop('sum');"><img src="/src/assets/img/control_left.jpg"> </a>
+                                    <a id="next_button" class="right carousel-control" href="#carousel-247689" data-slide="next" ng-click="video_stop('add');"><img src="/src/assets/img/control_right.jpg"> </a>
+
+
+                                    <!--<ol class="carousel-indicators">
+                                        <li data-target="#carousel-247689" data-slide-to="0" style="background: #000000">1</li>
+                                        <li data-target="#carousel-247689" data-slide-to="1" style="background: #000000">2</li>
+                                        <li data-target="#carousel-247689" data-slide-to="2" style="background: #000000">3</li>
+                                        <li data-target="#carousel-247689" data-slide-to="3" style="background: #000000">4</li>
+                                    </ol>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <!--문의-->
+            <div class="box-ing sub-detail" style="overflow:hidden;">
+                <div class="sub-title">
+                    뮤지터 활동
+                </div>
+                <div class="col-xs-6 no-padding text-center">
+                    <p class="star_rating" ng-if="avg_point == 5">
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                    </p>
+                    <p class="star_rating" ng-if="avg_point <5 && avg_point >=4">
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a>★</a>
+                    </p>
+                    <p class="star_rating" ng-if="avg_point <4 && avg_point >=3">
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a>★</a>
+                        <a>★</a>
+                    </p>
+                    <p class="star_rating" ng-if="avg_point <3 && avg_point >=2">
+                        <a class="on">★</a>
+                        <a class="on">★</a>
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                    </p>
+                    <p class="star_rating" ng-if="avg_point < 2 && avg_point > 1">
+                        <a class="on">★</a>
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                    </p>
+                    <p class="star_rating" ng-if="avg_point == 0">
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                        <a>★</a>
+                    </p>
+                    <p>
+                        평점 <span>{{avg_point}}</span>/5.00
+                    </p>
+                </div>
+
+                <div class="col-xs-6 no-padding" style="padding-right:15px;">
+                    <dl class="ac-dl">
+                        <dt>
+                            평가
+                        </dt>
+                        <dd>
+                            <strong ng-if="musician_fixapply[0].notdata !== 'none'">{{musician_fixapply.length}}</strong>
+                            <strong ng-if="musician_fixapply[0].notdata == 'none'">0</strong>
+                            개
+                        </dd>
+                        <dt>
+                            활동횟수
+                        </dt>
+                        <dd>
+                            <strong><!--0-->{{musician_info[0].apply_count}}</strong>
+                            건
+                        </dd>
+                        <dt>
+                            포트폴리오
+                        </dt>
+                        <dd>
+                            <strong ng-if="musician_info[0].server_portfolio == null">0</strong>
+                            <strong ng-if="musician_info[0].server_portfolio !== null">{{musician_info[0].server_portfolio.length}}</strong>
+                            개
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-xs-12" style="clear:both;">
+
+                    <div id="accordion" role="tablist" aria-multiselectable="true">
+
+                        <!--활동1-->
+                        <div class="box-ing pro-detail ac-box" ng-repeat="fixapply in musician_fixapply" ng-if="musician_fixapply[0].notdata !== 'none'">
+                            <!--모집중 타이틀-->
+                            <div class="box-head">
+
+                                <div class="col-xs-6">
+                                    <p class="text-left">
+                                        <span><!--단기-->{{fixapply.categoryFirstName}}</span> > <span><!--반주-->{{fixapply.categorySecName}}</span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-6 text-right">
+                                    <!--wwjqow-->{{fixapply.memberNickname}}
+                                </div>
+                            </div>
+                            <!--모집중 내용-->
+                            <div class="box-body">
+                                <div class="border">
+                                    <p class="col-xs-12 no-padding box-title">
+                                        <img src="/src/assets/img/premiun-badge.png" style="width:17px;"> <!--축가 반주자 찾아요-->{{fixapply.recruitTitle}}
+                                    </p>
+                                </div>
+                                <div class="border">
+                                    <dl class="col-xs-12 pro-info">
+                                        <dt>
+                                            <img src="/src/assets/img/kr-won.png" class="img-responsive pull-left"> 계약금액
+                                        </dt>
+                                        <dd>
+                                            <!--100,000-->
+                                            {{fixapply.fixPrice}}
+                                        </dd>
+                                        <dt>
+                                            <img src="/src/assets/img/sendwatch.png" class="img-responsive pull-left">계약일
+                                        </dt>
+                                        <dd>
+                                            <!--2015년 8월 7일-->
+                                            {{fixapply.fixPriceDate}}
+                                        </dd>
+                                        <dt>
+                                            <img src="/src/assets/img/star.png" class="img-responsive pull-left">평점
+                                        </dt>
+                                        <dd>
+                                            <p class="star_rating" ng-if="fixapply.afterPointPoint == 5">
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                            </p>
+                                            <p class="star_rating" ng-if="fixapply.afterPointPoint <5 && fixapply.afterPointPoint >=4">
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a>★</a>
+                                            </p>
+                                            <p class="star_rating" ng-if="fixapply.afterPointPoint <4 && fixapply.afterPointPoint >=3">
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                            </p>
+                                            <p class="star_rating" ng-if="fixapply.afterPointPoint <3 && fixapply.afterPointPoint >=2">
+                                                <a class="on">★</a>
+                                                <a class="on">★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                            </p>
+                                            <p class="star_rating" ng-if="fixapply.afterPointPoint < 2">
+                                                <a class="on">★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                                <a>★</a>
+                                            </p>
+
+                                            <p style="margin-bottom:0;">
+                                                <span><!--4.65-->{{fixapply.afterPointPoint}}</span> / 5.00
+                                            </p>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="border accodian-tt" id="headingOne">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne{{$index}}" aria-expanded="true" aria-controls="collapseOne" ng-click="acodian_click($event);"><!--접혔을때-->자세히 보기 ▼<!--열렸을때--><!--간단히 보기 ▲--> </a>
+                                </div>
+                                <div id="collapseOne{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <!--별점보기-->
+                                        <dl class="col-xs-12 no-padding pro-info detail-star-dl">
+                                            <div ng-repeat="apply_point in fixapply.apply_point">
+                                                <dt>
+                                                    <!--전문성-->
+                                                    {{apply_point.afterPointName}}
+                                                </dt>
+                                                <dd class="dd-score">
+                                                    <!--3.0-->
+                                                    {{apply_point.afterPointPoint}}
+                                                </dd>
+                                                <dd>
+                                                    <p class="star_rating" ng-if="apply_point.afterPointPoint == 5">
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                    </p>
+                                                    <p class="star_rating" ng-if="apply_point.afterPointPoint <5 && apply_point.afterPointPoint >=4">
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a>★</a>
+                                                    </p>
+                                                    <p class="star_rating" ng-if="apply_point.afterPointPoint <4 && apply_point.afterPointPoint >=3">
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                    </p>
+                                                    <p class="star_rating" ng-if="apply_point.afterPointPoint <3 && apply_point.afterPointPoint >=2">
+                                                        <a class="on">★</a>
+                                                        <a class="on">★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                    </p>
+                                                    <p class="star_rating" ng-if="apply_point.afterPointPoint < 2">
+                                                        <a class="on">★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                        <a>★</a>
+                                                    </p>
+                                                </dd>
+                                            </div>
+                                        </dl>
+
+                                        <div class="text-comment">
+                                            <label>코멘트</label>
+                                            <div class="text-comment-area"><!--성실하고 밝게 해주셔서 감사합니다 ^^-->
+                                            {{fixapply.comment}}</div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--/활동1-->
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+

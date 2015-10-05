@@ -1,5 +1,5 @@
 'use strict';
-var data1;
+
 angular.module('eventApp')
     .controller('event_register', function ($scope,executeResults ,$http, $route, $rootScope, $location ,$routeParams) {
 

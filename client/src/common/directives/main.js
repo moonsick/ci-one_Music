@@ -13,13 +13,19 @@ angular.module('eventApp')
 
 
 
-
-
         $rootScope.machine = 'pc';
         if (navigator.userAgent.match(/iPad/) == null && navigator.userAgent.match(/iPhone|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson| opera mobi|Windows Phone|IEMobile|POLARIS/) != null)
         {
             if (navigator.userAgent.toLowerCase().indexOf('ipad') > -1 ||
                 (navigator.userAgent.toLowerCase().indexOf('android') > -1 && navigator.userAgent.toLowerCase().indexOf('mobile') == -1)) {
+
+                var head_url = [];
+                head_url = String(window.location).split('/');
+                var head_url2 = head_url[3];
+                if(head_url2[0] == "m"){
+                    $rootScope.machine = 'mobile';
+                }
+
 
             }else{
                 // 모바일 일때
@@ -29,7 +35,7 @@ angular.module('eventApp')
                 var head_url2 = head_url[3];
                 if(head_url2[0] !== "m"){
                     if(head_url[3] == ""){
-                        window.location = "/m";
+                        window.location = "/m?search=";
                     }else{
                         window.location ="/m_"+head_url[3];
                     }
@@ -37,10 +43,5 @@ angular.module('eventApp')
             }
 
         }
-
-
-
-
-
 
     });
